@@ -15,7 +15,7 @@ export class ProjectListComponent implements OnInit {
       'coverImg': '/assets/img/covers/0.jpg',
     },
     {
-      'name': '测试0022',
+      'name': '测试0022333',
       'desc': '22222',
       'coverImg': '/assets/img/covers/1.jpg',
     }
