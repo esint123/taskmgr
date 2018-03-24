@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-invite',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InviteComponent implements OnInit {
 
-  constructor() { }
+  items = [
+    {
+      id: 1,
+      name: '张三',
+    },
+    {
+      id: 1,
+      name: '李四',
+    },
+    {
+      id: 1,
+      name: '王五',
+    }
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  displayUser(user: { id: string; name: string }) {
+    return user ? user.name : '';
+  }
 }

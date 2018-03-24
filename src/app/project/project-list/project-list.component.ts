@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {NewProjectComponent} from '../new-project/new-project.component';
+import {InviteComponent} from '../invite/invite.component';
 
 @Component({
   selector: 'app-project-list',
@@ -24,11 +25,19 @@ export class ProjectListComponent implements OnInit {
   constructor(private dialog: MatDialog) {
   }
 
+  errorMessage: any;
+
   ngOnInit() {
   }
 
   openNewProjectDialog() {
-    this.dialog.open(NewProjectComponent, {data: '数据传递'});
+    const dialogRef = this.dialog.open(NewProjectComponent, {data: {dark: true}});
+    dialogRef.afterClosed().subscribe(value => console.log(value),
+      error => this.errorMessage = <any>error);
+  }
+
+  Dialog() {
+    const dialogRef = this.dialog.open(InviteComponent);
   }
 }
 
