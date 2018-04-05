@@ -12,14 +12,17 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {loadSvgResources} from '../utils/svg.util';
 import {SharedModule} from '../shared/shared.module';
 import 'hammerjs';
-
+import 'rxjs/add/operator/take';
+import {AppRoutingModule} from '../app-routing.module';
 
 @NgModule({
   imports: [
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   declarations: [
     HeaderComponent,
@@ -31,7 +34,8 @@ import 'hammerjs';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
   ]
 })
 export class CoreModule {

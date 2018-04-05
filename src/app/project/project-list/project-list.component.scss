@@ -1,13 +1,18 @@
 .card {
-  height: 360px;
-  flex: 0 0 360px;
+  height: 260px;
+  flex: 0 0 310px;
   margin: 10px;
+  display: flex;
 }
 
-:host {
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: scroll;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .fab-button {
