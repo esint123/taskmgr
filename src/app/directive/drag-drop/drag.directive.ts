@@ -2,7 +2,7 @@ import {Directive, HostListener, ElementRef, Renderer2, Input} from '@angular/co
 import {DragDropService} from '../drag-drop.service';
 
 @Directive({
-  selector: '[app-draggable][draggedClass]'
+  selector: '[app-draggable][dragTag][dragData][draggedClass]'
 })
 export class DragDirective {
 
@@ -23,8 +23,8 @@ export class DragDirective {
   @Input() dragData: any;
 
   constructor(private el: ElementRef,
-                 private rd: Renderer2,
-                 private service: DragDropService) {
+              private rd: Renderer2,
+              private service: DragDropService) {
   }
 
   @HostListener('dragstart', ['$event'])
