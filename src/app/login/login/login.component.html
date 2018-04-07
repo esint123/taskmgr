@@ -28,12 +28,12 @@
         每日佳句
       </mat-card-title>
       <mat-card-subtitle>
-        人生。。。。。。。。。
+        {{quote.cn}}
       </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/quote_fallback.jpg" alt="">
+    <img mat-card-image [src]="quote.pic" alt="提示">
     <mat-card-content>
-      测试。。。。。。
+      {{quote.en}}
     </mat-card-content>
   </mat-card>
 </form>

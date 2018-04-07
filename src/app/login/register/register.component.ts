@@ -30,8 +30,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit({value, valid}, e: Event) {
     e.preventDefault();
-    console.log(JSON.stringify(value));
-    console.log(valid);
+
     if (!valid) {
       return;
     }
