@@ -22,6 +22,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 1,
       name: '待办',
+      order: 1,
       tasks: [
         {
           id: 1,
@@ -53,6 +54,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 2,
       name: '进行中',
+      order: 2,
       tasks: [
         {
           id: 1,
@@ -119,12 +121,23 @@ export class TaskHomeComponent implements OnInit {
     switch (srcData.tag) {
       case 'task-item':
         console.log('task-item');
+        console.log(srcData.data);
+        console.log(JSON.stringify(srcData.data));
         break;
       case 'task-list':
         console.log('task-list');
+        console.log(srcData.data);
+        console.log(JSON.stringify(srcData.data));
+        const temp = srcData.data.order;
+        srcData.data.order = list.order;
+        list.order = temp;
         break;
       default:
         break;
     }
+  }
+
+  handleQuickTask(desc: string) {
+    console.log(desc);
   }
 }

@@ -8,10 +8,14 @@ import {
 } from '@angular/material';
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
 import {DirectiveModule} from '../directive/directive.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -34,6 +38,8 @@ import {DirectiveModule} from '../directive/directive.module';
   ],
   exports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -53,9 +59,11 @@ import {DirectiveModule} from '../directive/directive.module';
     MatRadioModule,
     MatSelectModule,
     DirectiveModule,
+    ImageListSelectComponent,
   ],
   declarations: [
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ImageListSelectComponent
   ],
 
   entryComponents: [ConfirmDialogComponent]

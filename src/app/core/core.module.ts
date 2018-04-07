@@ -14,6 +14,7 @@ import {SharedModule} from '../shared/shared.module';
 import 'hammerjs';
 import 'rxjs/add/operator/take';
 import {AppRoutingModule} from '../app-routing.module';
+import {ServicesModule} from '../services/services.module';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import {AppRoutingModule} from '../app-routing.module';
     SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ServicesModule.forRoot(),
   ],
   declarations: [
     HeaderComponent,
