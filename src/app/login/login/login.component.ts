@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup;
   quote: Quote = {
+    id: '',
     cn: '',
     en: '',
     pic: ''
